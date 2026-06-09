@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Wobble, Millennium Bridge | SPH4U Summative</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500;600&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="bar" id="bar"></div>
+<div class="hint">← → or space to advance · F for fullscreen</div>
+<button class="fs" id="fsBtn">⤢ Fullscreen</button>
+
+<div class="deck" id="deck">
+
+  <!-- ===== MASTER TITLE ===== -->
+  <section class="slide dark" data-part="The Wobble">
+    <div class="kick anim">SPH4U Final Summative · Option 3, Engineering Disasters</div>
+    <h1 class="anim" style="--d:.1s">The <em>Wobble</em></h1>
+    <div class="lead anim" style="--d:.25s">How a brand-new London bridge was shaken into closure by the people walking across it, and the physics of why.</div>
+    <div class="meta anim" style="--d:.4s">London Millennium Footbridge · Opened 10 Jun 2000 · Closed 12 Jun 2000 · Reopened 22 Feb 2002</div>
+  </section>
+
+  <!-- ===== PART I DIVIDER ===== -->
+  <section class="slide dark" data-part="I · The Disaster">
+    <div class="kick anim">Part I</div>
+    <h1 class="anim" style="--d:.1s">The<br>Disaster</h1>
+    <div class="lead anim" style="--d:.25s">A brand-new London bridge, open for just two days before it had to be shut.</div>
+  </section>
+
+  <section class="slide" data-part="I · The Disaster">
+    <div class="kick anim">The structure</div>
+    <h2 class="anim" style="--d:.1s">The first new Thames<br>crossing in a century</h2>
+    <p class="body anim" style="--d:.25s" style="max-width:42ch">A sleek steel suspension footbridge linking St&nbsp;Paul's Cathedral to the brand-new Tate&nbsp;Modern, designed by Foster, Caro and the engineers at Arup. It was meant to be the showpiece of London's millennium celebrations: thin, low and elegant, unlike any bridge before it. That slim, lightweight design is exactly what would make it vulnerable two days later.</p>
+    <div class="stats anim" style="--d:.4s">
+      <div><div class="k">Span</div><div class="v">320 m</div></div>
+      <div><div class="k">Opened</div><div class="v">10 Jun 2000</div></div>
+      <div><div class="k">Capacity</div><div class="v">5,000</div></div>
+    </div>
+  </section>
+
+  <section class="slide" data-part="I · The Disaster">
+    <div class="kick anim">Opening day</div>
+    <div class="big anim" style="--d:.12s">100,000</div>
+    <div class="lead anim" style="--d:.3s">people crossed it on the first day.</div>
+    <p class="body anim" style="--d:.45s">It was an instant landmark. But within hours the deck began to move sideways under the crowd, gently at first, then enough that people stopped walking and grabbed the handrails to steady themselves.</p>
+  </section>
+
+  <section class="slide dark" data-part="I · The Disaster">
+    <div class="kick anim">The sway begins</div>
+    <h2 class="anim" style="--d:.1s">It swayed sideways,<br>and the crowd<br>swayed with it</h2>
+    <p class="body anim" style="--d:.28s">The more the deck moved, the more people instinctively adjusted their steps to stay balanced, all leaning the same way at the same time. That synchronised pushing drove the deck even harder, which pulled even more people into step. Each loop made the next one bigger: a runaway feedback loop.</p>
+    <div class="stats anim" style="--d:.45s">
+      <div><div class="k">Lateral sway</div><div class="v" style="color:#ff7a5c">~70 mm</div></div>
+      <div><div class="k">Peak accel.</div><div class="v" style="color:#ff7a5c">0.25 g</div></div>
+    </div>
+  </section>
+
+  <section class="slide" data-part="I · The Disaster">
+    <div class="kick anim">48 hours later</div>
+    <div class="big anim" style="--d:.1s;font-size:clamp(54px,14vw,170px)">CLOSED</div>
+    <div class="lead anim" style="--d:.3s">Shut down two days after opening. London nicknamed it the "Wobbly Bridge."</div>
+    <div class="meta anim" style="--d:.45s">Reopened only after two years and £5 million of repairs.</div>
+    <p class="body anim" style="--d:.6s">Engineers judged the swaying too severe to be safe, so they closed it. The bridge had never come close to breaking, it was simply unusable until the cause could be found and fixed.</p>
+  </section>
+
+  <section class="slide dark" data-part="I · The Disaster">
+    <div class="kick anim">The key insight</div>
+    <h2 class="anim" style="--d:.1s">The bridge was<br>never weak.</h2>
+    <p class="body anim" style="--d:.28s" style="max-width:44ch">It was structurally sound the entire time. The failure was <strong>dynamic</strong>, not a question of strength. Nobody had designed for the way a moving crowd's footsteps could line up with the deck's natural sideways sway and amplify it. Engineers gave the effect a name:</p>
+    <div class="tline anim" style="--d:.45s"><span class="t">The phenomenon</span>Synchronous lateral excitation</div>
+  </section>
+
+  <!-- ===== PART II DIVIDER ===== -->
+  <section class="slide dark" data-part="II · The Physics">
+    <div class="kick anim">Part II</div>
+    <h1 class="anim" style="--d:.1s">The<br>Physics</h1>
+    <div class="lead anim" style="--d:.25s">Three units, five calculations: resonance, forces, and energy.</div>
+  </section>
+
+  <section class="slide" data-part="II · The Physics">
+    <div class="anim"><span class="unit">Waves</span><span class="unit">SHM</span></div>
+    <h2 class="anim" style="--d:.1s">1 · Natural frequency</h2>
+    <p class="body anim" style="--d:.22s">Every structure has a natural frequency, the rhythm it sways at on its own once disturbed, like a plucked guitar string or a child's swing. For the bridge's central span that rhythm was f₀&nbsp;=&nbsp;0.49&nbsp;Hz (Dallard et&nbsp;al., 2001), so we treat the deck as a mass on a spring:</p>
+    <div class="eq anim" style="--d:.38s">
+      <span class="lbl">Angular frequency &amp; period, SHM</span>
+      ω₀ = 2πf₀ = 2π(0.49) = <b>3.08 rad/s</b><br>
+      T = 1 / f₀ = 1 / 0.49 = <b>2.04 s</b>
+    </div>
+    <p class="plain anim" style="--d:.5s">In plain terms: left to itself, the bridge naturally sways once about every 2 seconds. That's its built-in rhythm, like a swing's.</p>
+  </section>
+
+  <section class="slide dark" data-part="II · The Physics">
+    <div class="kick anim">Why it resonated</div>
+    <h2 class="anim" style="--d:.1s">Footsteps in the<br>danger band</h2>
+    <p class="body anim" style="--d:.22s">You sway sideways once every two steps, so the lateral push arrives near 1&nbsp;Hz. The bridge's three spans had lateral modes from ~0.5 to 1.1&nbsp;Hz, all below the 1.3&nbsp;Hz threshold, so ordinary walking could drive them (Dallard et&nbsp;al., 2001).</p>
+    <div class="eq anim" style="--d:.4s">
+      <span class="lbl">Resonance condition</span>
+      f<sub>drive</sub> ≈ f₀ → each push adds to the last → amplitude grows
+    </div>
+    <p class="plain anim" style="--d:.55s">In plain terms: people's footsteps happened to match the bridge's rhythm, so every step pushed the sway a bit bigger, like timing your pushes on a swing.</p>
+  </section>
+
+  <section class="slide" data-part="II · The Physics">
+    <div class="anim"><span class="unit">SHM</span></div>
+    <h2 class="anim" style="--d:.1s">2 · Speed &amp; acceleration</h2>
+    <p class="body anim" style="--d:.22s">With a central-span sway amplitude A = 70&nbsp;mm = 0.070&nbsp;m:</p>
+    <div class="eq anim" style="--d:.36s">
+      <span class="lbl">From SHM: v = ωA, a = ω²A</span>
+      v<sub>max</sub> = ω₀A = (3.08)(0.070) = <b>0.216 m/s</b><br>
+      a<sub>max</sub> = ω₀²A = (3.08)²(0.070) = (9.49)(0.070) = <b>0.66 m/s²</b><br>
+      <span class="step">≈ 0.07 g on the central span; stiffer higher modes reached ~0.25 g (Taylor Devices, n.d.)</span>
+    </div>
+    <p class="plain anim" style="--d:.5s">In plain terms: at full sway the deck was moving sideways about as fast as a slow stroll, enough that people had to grab the railings.</p>
+  </section>
+
+  <section class="slide dark" data-part="II · The Physics">
+    <div class="anim"><span class="unit">Dynamics</span><span class="unit">Energy</span></div>
+    <h2 class="anim" style="--d:.1s">3 · People as<br>negative damping</h2>
+    <p class="body anim" style="--d:.22s">Damping is anything that drains a wobble away: friction, air resistance, shock absorbers. It normally <em>opposes</em> motion. But to stay balanced on a moving deck, walkers pushed <em>with</em> its motion instead, adding energy every cycle rather than removing it. Arup modelled each person as a force that grows with the deck's speed:</p>
+    <div class="eq anim" style="--d:.4s">
+      <span class="lbl">Arup pedestrian load model</span>
+      F = c<sub>p</sub> · v &nbsp;&nbsp; where c<sub>p</sub> = <b>300 N·s/m</b> per person
+      <span class="step">A "dashpot" with the sign flipped, negative damping (Dallard et al., 2001).</span>
+    </div>
+    <p class="plain anim" style="--d:.55s">In plain terms: instead of calming the bridge down, the crowd was feeding it, pushing the same way it was already moving.</p>
+  </section>
+
+  <section class="slide" data-part="II · The Physics">
+    <div class="anim"><span class="unit">Energy</span></div>
+    <h2 class="anim" style="--d:.1s">4 · Energy fed in</h2>
+    <p class="body anim" style="--d:.2s">Power delivered by one walker is P = Fv = c<sub>p</sub>v². Averaging over a cycle (⟨v²⟩ = ½v<sub>max</sub>²):</p>
+    <div class="eq anim" style="--d:.34s">
+      <span class="lbl">Energy added per pedestrian, per cycle</span>
+      ⟨P⟩ = ½c<sub>p</sub>v<sub>max</sub>² = ½(300)(0.216)² = <b>7.0 W</b><br>
+      E = ⟨P⟩·T = (7.0)(2.04) ≈ <b>14 J</b> per person, per cycle<br>
+      <span class="res">Positive &amp; repeating → energy accumulates → the runaway.</span>
+    </div>
+    <p class="plain anim" style="--d:.5s">In plain terms: every step, each person handed the bridge a little energy. Nothing removed it, so it piled up cycle after cycle.</p>
+  </section>
+
+  <section class="slide dark" data-part="II · The Physics">
+    <div class="anim"><span class="unit">Dynamics</span><span class="unit">Energy</span></div>
+    <h2 class="anim" style="--d:.1s">5 · The tipping point</h2>
+    <p class="body anim" style="--d:.2s">Instability begins when the crowd's energy input overtakes the structure's damping. Dallard derived a critical number:</p>
+    <div class="eq anim" style="--d:.34s">
+      <span class="lbl">Critical crowd, Dallard et al. (2001)</span>
+      N<sub>c</sub> = 8π·ζ·f<sub>n</sub>·M / c<sub>p</sub><br>
+      <span class="step">Arup's walking test, north span (f<sub>n</sub> = 1.03 Hz):</span><br>
+      N<sub>c</sub> = <b>166 people</b> → sudden, violent sway (Newland, 2003)<br>
+      <span class="res">Check: M·ζ = N<sub>c</sub>c<sub>p</sub>/(8πf<sub>n</sub>) = (166)(300)/(8π·1.03) ≈ 1.9×10³ kg → with ζ ≈ 0.6%, modal mass ≈ 3×10⁵ kg.</span>
+    </div>
+    <p class="plain anim" style="--d:.5s">In plain terms: below 166 people the bridge stayed calm. Add just a few more, and the sway suddenly exploded.</p>
+  </section>
+
+  <section class="slide" data-part="II · The Physics">
+    <div class="kick anim">Crowd synchrony</div>
+    <h2 class="anim" style="--d:.1s">The crowd locked<br>into rhythm</h2>
+    <p class="body anim" style="--d:.22s">Past 166 people, any small sway made walking in time the easier way to balance, so more people synced, feeding in more energy. The same mathematics that describes fireflies flashing together (Strogatz et&nbsp;al., 2005).</p>
+  </section>
+
+  <!-- SIMULATION -->
+  <section class="slide" data-part="II · The Physics" style="padding:4.5vh 6vw">
+    <div class="kick anim">Interactive model</div>
+    <h2 class="anim" style="--d:.08s;font-size:clamp(22px,3.6vw,38px);margin-bottom:.2em">See it happen</h2>
+    <div class="simwrap anim" style="--d:.2s">
+      <div class="stage">
+        <canvas id="c" width="880" height="232"></canvas>
+        <div class="badge" id="badge">Stable</div>
+        <div class="read"><span>SWAY <b id="ampOut">0&nbsp;mm</b></span><span>SYNC <b id="syncOut">0%</b></span></div>
+      </div>
+      <div class="ctrl">
+        <div class="grp"><label>Step freq</label><input type="range" id="freq" min="0.20" max="1.30" step="0.005" value="0.95"><span class="val"><span id="freqV">0.95</span> Hz</span></div>
+        <div class="grp"><label>People</label><input type="range" id="ppl" min="20" max="320" step="1" value="180"><span class="val" id="pplV">180</span></div>
+        <div class="grp"><label>Dampers</label><div class="tog"><button id="dOff" class="on">None</button><button id="dOn">Retrofit</button></div></div>
+      </div>
+      <div class="simcap">Slide step-freq toward <b>0.49 Hz</b> → walkers redden &amp; lock in → sway explodes. Drop people below <b>166</b> → it can't. Flip <b>Retrofit</b> → it dies.</div>
+    </div>
+  </section>
+
+  <section class="slide dark" data-part="II · The Physics">
+    <div class="kick anim">All the numbers</div>
+    <h2 class="anim" style="--d:.1s;font-size:clamp(24px,4.5vw,48px)">Why it failed, in figures</h2>
+    <div class="eq anim" style="--d:.26s">
+      Natural frequency f₀ = <b>0.49 Hz</b> → ω₀ = 3.08 rad/s, T = 2.04 s<br>
+      Sway A = 70 mm → v<sub>max</sub> = <b>0.22 m/s</b>, a<sub>max</sub> = <b>0.66 m/s²</b><br>
+      Energy in per person/cycle ≈ <b>14 J</b> (c<sub>p</sub> = 300 N·s/m)<br>
+      Critical crowd N<sub>c</sub> = <b>166</b> (north span, 1.03 Hz)<br>
+      <span class="res">Structural damping before fix ≈ 0.6% of critical, far too little to absorb a synced crowd.</span>
+    </div>
+  </section>
+
+  <!-- ===== PART III DIVIDER ===== -->
+  <section class="slide dark" data-part="III · Fix &amp; Fallout">
+    <div class="kick anim">Part III</div>
+    <h1 class="anim" style="--d:.1s">The Fix &amp;<br>the Fallout</h1>
+    <div class="lead anim" style="--d:.25s">The error, the engineering solution, and the bridge's mark on London.</div>
+  </section>
+
+  <section class="slide" data-part="III · Fix &amp; Fallout">
+    <div class="kick anim">The design error</div>
+    <h2 class="anim" style="--d:.1s">An untested<br>assumption</h2>
+    <p class="body anim" style="--d:.25s">No part was weak. The mistake was assuming pedestrian loads were vertical and random. Lateral, synchronised crowd loading simply wasn't part of footbridge design in 2000 (Dallard et&nbsp;al., 2001).</p>
+  </section>
+
+  <section class="slide dark" data-part="III · Fix &amp; Fallout">
+    <div class="kick anim">Two ways to fix it</div>
+    <h2 class="anim" style="--d:.1s">Stiffen it, or<br>damp it</h2>
+    <p class="body anim" style="--d:.25s">Stiffening would push the natural frequency out of the danger band. But the maths killed that option:</p>
+    <div class="eq anim" style="--d:.42s">
+      <span class="lbl">Why stiffening was rejected, f₀ ∝ √(k/m)</span>
+      To raise f₀ from 0.49 Hz → 1.3 Hz: k must rise by (1.3/0.49)² = <b>≈ 7×</b>
+      <span class="res">A 7× stiffer structure destroys the slim design. → They chose damping.</span>
+    </div>
+  </section>
+
+  <section class="slide" data-part="III · Fix &amp; Fallout">
+    <div class="kick anim">The retrofit</div>
+    <h2 class="anim" style="--d:.1s">37 + 52 dampers</h2>
+    <p class="body anim" style="--d:.25s">Arup fitted <strong>37 viscous (fluid) dampers</strong>, like car shock absorbers, plus about <strong>52 tuned mass dampers</strong> beneath the deck (Foster&nbsp;+&nbsp;Partners, 2002), raising damping above 20% of critical. The bridge has been stable ever since.</p>
+    <div class="eq anim" style="--d:.42s">
+      <span class="lbl">Result</span>
+      Energy now drains <b>faster</b> than any crowd can add it. Reopened Feb 2002.
+    </div>
+  </section>
+
+  <section class="slide" data-part="III · Fix &amp; Fallout">
+    <div class="kick anim">Impact on society</div>
+    <h2 class="anim" style="--d:.08s;font-size:clamp(24px,4.5vw,48px)">Two sides</h2>
+    <div class="sides anim" style="--d:.22s">
+      <div class="col">
+        <div class="t pos">Positive</div>
+        <ul>
+          <li>Anchored the Bankside regeneration, linking St&nbsp;Paul's to Tate&nbsp;Modern, which generated ~£100M/yr &amp; ~3,000 jobs for a deprived borough <span class="cite">(Tate, 2001)</span>.</li>
+          <li>A safe, step-free, car-free Thames crossing now hosting cycle-hire docks.</li>
+          <li>The research permanently improved global footbridge design <span class="cite">(Venuti &amp; Bruno, 2009)</span>.</li>
+        </ul>
+      </div>
+      <div class="col">
+        <div class="t neg">Negative</div>
+        <ul>
+          <li>The £5M repair pushed cost from a £16M budget to £23.2M of public/charitable funds.</li>
+          <li>Two-year closure denied the public a promised crossing.</li>
+          <li>The "Wobbly Bridge" name stuck, reputational damage to a flagship project.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide dark" data-part="III · Fix &amp; Fallout">
+    <div class="kick anim">Impact on the environment</div>
+    <h2 class="anim" style="--d:.08s;font-size:clamp(24px,4.5vw,48px)">Two sides</h2>
+    <div class="sides anim" style="--d:.22s">
+      <div class="col">
+        <div class="t pos">Positive</div>
+        <ul>
+          <li>Car-free crossing, every walk/cycle trip replaces a vehicle journey, cutting local emissions.</li>
+          <li>Concentrates foot traffic near low-carbon transit (Blackfriars, Southwark).</li>
+          <li>2025–26 refurbishment reuses the existing aluminium deck panels to cut waste.</li>
+        </ul>
+      </div>
+      <div class="col">
+        <div class="t neg">Negative</div>
+        <ul>
+          <li>Steel &amp; aluminium are energy-intensive, high embodied carbon before anyone crosses <span class="cite">(Jena &amp; Kaewunruen, 2021)</span>.</li>
+          <li>The retrofit added material shipped from the US &amp; Germany.</li>
+          <li>Construction works in the Thames disrupt the river environment.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" data-part="III · Fix &amp; Fallout">
+    <div class="kick anim">The lesson</div>
+    <h2 class="anim" style="--d:.1s">A sound structure can<br>still fail dynamically.</h2>
+    <p class="body anim" style="--d:.25s">The Millennium Bridge held perfectly, but physics it wasn't designed for nearly shook it apart. Resonance, damping and energy aren't abstract: they close bridges.</p>
+  </section>
+
+  <section class="slide dark" data-part="III · Fix &amp; Fallout">
+    <div class="kick anim">References, APA</div>
+    <div class="refs anim" style="--d:.15s;color:var(--paper)">
+      <p>Dallard, P., Fitzpatrick, A.&nbsp;J., Flint, A., Le&nbsp;Bourva, S., Low, A., Ridsdill&nbsp;Smith, R.&nbsp;M., &amp; Willford, M. (2001). The London Millennium Footbridge. <em>The Structural Engineer, 79</em>(22), 17–33.</p>
+      <p>Fujino, Y., Pacheco, B.&nbsp;M., Nakamura, S., &amp; Warnitchai, P. (1993). Synchronization of human walking observed during lateral vibration of a congested pedestrian bridge. <em>Earthquake Engineering &amp; Structural Dynamics, 22</em>(9), 741–758.</p>
+      <p>Jena, T., &amp; Kaewunruen, S. (2021). Life cycle sustainability assessments of an innovative FRP composite footbridge. <em>Sustainability, 13</em>(23), 13000.</p>
+      <p>Newland, D.&nbsp;E. (2003). <em>Vibration of the London Millennium Footbridge: Part 2: Cure.</em> University of Cambridge, Department of Engineering.</p>
+      <p>Strogatz, S.&nbsp;H., Abrams, D.&nbsp;M., McRobie, A., Eckhardt, B., &amp; Ott, E. (2005). Crowd synchrony on the Millennium Bridge. <em>Nature, 438</em>(7064), 43–44.</p>
+      <p>Tate. (2001). <em>The economic impact of Tate Modern</em> [Press release]. https://www.tate.org.uk</p>
+      <p>Taylor Devices, Inc. (n.d.). <em>Damper retrofit of the London Millennium Footbridge</em> [Case study]. https://www.taylordevices.com</p>
+      <p>Venuti, F., &amp; Bruno, L. (2009). Crowd-structure interaction in lively footbridges under synchronous lateral excitation: A literature review. <em>Physics of Life Reviews, 6</em>(3), 176–206.</p>
+    </div>
+  </section>
+
+</div>
+
+<div class="arrows"><button id="prev">↑</button><button id="nextB">↓</button></div>
+<div class="dots" id="dots"></div>
+<div class="hud count" id="count">01 / 25</div>
+<div class="hud partlbl" id="partlbl">The Wobble</div>
+
+<script src="script.js"></script>
+</body>
+</html>
