@@ -1,4 +1,4 @@
-/* ===== The Wobble — slideshow engine + bridge simulation ===== */
+/* ===== The Wobble · slideshow engine + bridge simulation ===== */
 (() => {
   "use strict";
 
@@ -38,15 +38,22 @@
     else if (e.key === 'End') go(n - 1);
   });
 
-  addEventListener('click', e => {
-    if (e.target.closest('button,a,input,canvas,.dots,.arrows,.ctrl')) return;
-    (e.clientX > innerWidth * 0.35) ? next() : prev();
-  });
+  // click-to-advance disabled: only arrow keys / on-screen arrows / dots change slides
 
   function toggleFs() {
     document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen();
   }
   $('fsBtn').onclick = toggleFs;
+
+  // glossary terms: tap to toggle on touch devices
+  document.querySelectorAll('.term').forEach(el => {
+    el.setAttribute('tabindex', '0');
+    el.addEventListener('click', e => {
+      e.stopPropagation();
+      document.querySelectorAll('.term.open').forEach(t => { if (t !== el) t.classList.remove('open'); });
+      el.classList.toggle('open');
+    });
+  });
 
   go(0);
 
@@ -56,14 +63,15 @@
   const ctx = cv.getContext('2d');
   const W = cv.width, H = cv.height, midY = H / 2;
 
-  // physics constants
+  // physics constants (teaching model, tuned to match Arup's findings)
   const f0 = 0.49, w0 = 2 * Math.PI * f0;   // natural frequency of the deck
-  const zS = 0.006, zD = 0.11;              // damping ratio: structural / retrofit
-  const Fper = 0.0016;                       // force scale per walker
-  const Kmax = 2.7, AREF = 0.012;            // sync coupling strength / saturation amplitude
+  const Nc0 = 166;                           // critical crowd (real value, Dallard 2001)
+  const kGrow = 0.045;                        // growth-rate scale
+  const resBW = 0.10;                         // resonance bandwidth (Hz)
+  const AREF = 0.012, CAP = 0.075;            // sync ref / display cap (m)
   const PXM = 1150;                          // metres -> pixels (display)
 
-  let x = 0.0008, v = 0;                     // deck displacement (m), velocity
+  let A = 0.0006, ph = 0, x = 0, R = 0;      // sway amplitude (m), phase, display x, sync
   let fStep = 0.95, nP = 180, damped = false, walkers = [];
   const C = { paper: '#e3d7c2', ink: '#181410', red: '#d9341c', rule: '#c3b69c' };
 
@@ -83,32 +91,31 @@
 
   // one integration substep
   function stp(dt) {
-    const z = damped ? zD : zS;
     const ws = 2 * Math.PI * fStep;
-    const moT = Math.atan2(v, x * w0);                 // phase of deck motion
-    const K = Kmax * Math.min(Math.abs(x) / AREF, 1);  // coupling grows with sway
-    let F = 0;
+    // resonance proximity: 1 when step-freq matches the bridge, ~0 when far off
+    const res = Math.exp(-Math.pow((fStep - f0) / resBW, 2));
+    // critical crowd: dampers push it out of reach
+    const Nc = damped ? 1e6 : Nc0;
+    // energy balance: above the critical crowd at resonance the sway grows, else decays
+    const rate = kGrow * (nP * res - Nc);
+    A += A * rate * dt;
+    if (A < 0.0004) A = 0.0004;             // small floor so it can recover
+    if (A > CAP) A = CAP;                    // display cap
+    ph += w0 * dt;                           // deck oscillates at its natural frequency
+    x = A * Math.sin(ph);
+    // sync (visual): walkers lock in as the sway grows at resonance
+    const Rt = res * Math.min(A / AREF, 1);
+    R += (Rt - R) * 2.5 * dt;
     for (const p of walkers) {
-      p.phase += ws * dt + K * Math.sin(moT - p.phase) * dt;  // Kuramoto pull
-      F += Math.sin(p.phase);
+      p.phase += ws * dt + 2.6 * R * Math.sin(ph - p.phase) * dt;  // pull toward deck motion
       p.u += p.sp * dt;
       if (p.u > 1.05) { p.u = -0.05; p.lane = (Math.random() - .5) * 48; }
     }
-    F *= Fper;
-    const a = -w0 * w0 * x - 2 * z * w0 * v + F;       // damped driven oscillator
-    v += a * dt; x += v * dt;
-    const cap = midY / PXM * 0.9;
-    if (x > cap) { x = cap; v = Math.min(v, 0); }
-    if (x < -cap) { x = -cap; v = Math.max(v, 0); }
-    return Math.abs(x);
+    return A;
   }
 
-  // crowd order parameter (0..1)
-  function sync() {
-    let sx = 0, sy = 0;
-    for (const p of walkers) { sx += Math.cos(p.phase); sy += Math.sin(p.phase); }
-    return Math.sqrt(sx * sx + sy * sy) / walkers.length;
-  }
+  // crowd sync level (0..1)
+  function sync() { return R; }
 
   function draw() {
     ctx.clearRect(0, 0, W, H);
@@ -138,7 +145,7 @@
     ctx.fillRect(44, deckY - dH / 2, W - 88, dH); ctx.strokeRect(44, deckY - dH / 2, W - 88, dH);
     ctx.strokeStyle = C.rule; ctx.beginPath(); ctx.moveTo(44, deckY); ctx.lineTo(W - 44, deckY); ctx.stroke();
     // walkers (blue -> red with sync)
-    const hot = Math.min(Math.abs(x) / AREF, 1);
+    const hot = R;
     for (const p of walkers) {
       const px = 44 + p.u * (W - 88), py = deckY + p.lane + Math.sin(p.phase) * 6;
       ctx.beginPath(); ctx.arc(px, py, 2.5, 0, 6.3);
