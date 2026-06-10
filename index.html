@@ -16,7 +16,7 @@
 </head>
 <body>
 <div class="bar" id="bar"></div>
-<div class="hint">arrow keys or the on-screen arrows to advance · F for fullscreen</div>
+<div class="hint">arrow keys or the on screen arrows to advance · F for fullscreen</div>
 <button class="fs" id="fsBtn">⤢ Fullscreen</button>
 
 <div class="deck" id="deck">
@@ -24,8 +24,8 @@
   <!-- 1 · TITLE -->
   <section class="slide dark" data-part="The Wobble">
     <div class="kick anim">SPH4U Final Summative · Option 3, Engineering Disasters</div>
-    <h1 class="anim" style="--d:.1s">The <em>Wobble</em></h1>
-    <div class="lead anim" style="--d:.25s">How a brand-new London bridge was shaken into closure by the people walking across it, and the physics of why.</div>
+    <h1 class="anim" style="--d:.1s">The <em>Millennium Wobble Bridge</em></h1>
+    <div class="lead anim" style="--d:.25s">How a brand new London bridge wobbled into closure by the people walking across it, and the physics of why.</div>
     <div class="meta anim" style="--d:.4s">London Millennium Footbridge · Opened 10 Jun 2000 · Closed 12 Jun 2000 · Reopened 22 Feb 2002</div>
   </section>
 
@@ -36,7 +36,7 @@
         <div class="kick anim">The disaster</div>
         <h2 class="anim" style="--d:.1s">Two days,<br>then closed</h2>
         <p class="body anim" style="--d:.25s">In June 2000 London opened the Millennium Bridge, the first new Thames crossing in over a century, a slim steel suspension footbridge from St&nbsp;Paul's to Tate&nbsp;Modern, engineered by the firm Arup with architects Foster&nbsp;+&nbsp;Partners. About 100,000 people crossed on opening day. Within hours the deck swayed sideways so badly that people grabbed the rails, and it was shut after just two days. It reopened two years later, after £5&nbsp;million of repairs (about CAD&nbsp;$9.3&nbsp;million).</p>
-        <div class="meta anim" style="--d:.4s">320 m span · ~100,000 on day one · open just 2 days · £5M repair</div>
+        <div class="meta anim" style="--d:.4s">320 m span · ~100,000 on day one · open just 2 days · £5M repair<br><span style="opacity:.7">Facts: Dallard et al., 2001; Tate, 2001</span></div>
       </div>
       <figure class="imgslot fig anim" style="--d:.4s">
         <img src="millemiumbridgeopening.jpg" alt="Crowds packed onto the Millennium Bridge on opening day, June 2000">
@@ -51,7 +51,7 @@
       <div class="txt">
         <div class="kick anim">The key insight</div>
         <h2 class="anim" style="--d:.1s">The bridge was<br>never weak</h2>
-        <p class="body anim" style="--d:.28s">It was structurally sound the whole time. This was a <span class="term">dynamic failure<span class="def">A vibration or motion problem, not a weak-structure problem. The bridge was strong, it just moved.</span></span>. Nobody had designed for the way a synchronised crowd's footsteps could match the deck's natural sway and amplify it, each cycle feeding the next in a runaway feedback loop. The effect is called:</p>
+        <p class="body anim" style="--d:.28s">It was structurally sound the whole time. This was a <span class="term">dynamic failure<span class="def">A vibration or motion problem, not a weak structure problem. The bridge was strong, it just moved.</span></span>. Nobody had designed for the way a synchronised crowd's footsteps could match the deck's natural sway and amplify it, each cycle feeding the next in a runaway feedback loop. The effect is called:</p>
         <div class="tline anim" style="--d:.45s"><span class="t">The phenomenon</span><span class="term">Synchronous lateral excitation<span class="def">A crowd, walking in step, driving the deck into a sideways vibration.</span></span></div>
       </div>
       <figure class="videoslot anim" style="--d:.4s">
@@ -65,7 +65,7 @@
   <section class="slide" data-part="II · The Physics">
     <div class="anim"><span class="unit adv">Beyond our course</span></div>
     <h2 class="anim" style="--d:.1s;margin-bottom:.15em">The mechanism: resonance</h2>
-    <p class="body anim" style="--d:.22s;max-width:62ch">The wobble is driven by <span class="term">resonance<span class="def">Pushing something at its natural rhythm so the motion keeps growing, like timing pushes on a swing.</span></span>: push the deck at its own natural rhythm and the motion grows each cycle. The diagram shows the forces on the swaying deck, the crowd's push beats the restoring and damping forces, so the sway keeps building.</p>
+    <p class="body anim" style="--d:.22s;max-width:62ch">The wobble is driven by <span class="term">resonance<span class="def">Pushing something at its natural rhythm so it keeps growing, like timing your pushes on a swing.</span></span>: push the deck at the right rhythm and it swings bigger every time. The diagram below shows the forces. The crowd pushes the same way the deck is already moving, so it adds energy instead of fighting it, and the sway gets bigger.</p>
     <div class="anim" style="--d:.38s;width:100%;max-width:660px;margin-top:.4em">
       <svg width="100%" viewBox="0 0 680 280" xmlns="http://www.w3.org/2000/svg" font-family="'IBM Plex Mono',monospace">
         <defs>
@@ -73,23 +73,24 @@
             <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
           </marker>
         </defs>
-        <line x1="80" y1="200" x2="600" y2="200" stroke="#c3b69c" stroke-width="1" stroke-dasharray="6 6"/>
-        <text x="606" y="204" font-size="11" fill="#6f6453">rest position</text>
-        <text x="200" y="76" font-size="12" fill="#181410">bridge deck</text>
-        <rect x="200" y="84" width="280" height="48" rx="6" fill="#e3d7c2" stroke="#181410" stroke-width="2"/>
-        <circle cx="248" cy="108" r="4" fill="#181410"/>
-        <circle cx="304" cy="108" r="4" fill="#181410"/>
-        <circle cx="360" cy="108" r="4" fill="#181410"/>
-        <circle cx="416" cy="108" r="4" fill="#181410"/>
-        <line x1="340" y1="84" x2="340" y2="40" stroke="#d9341c" stroke-width="5" marker-end="url(#ar)"/>
-        <text x="340" y="30" font-size="13" fill="#d9341c" text-anchor="middle" font-weight="600">crowd push</text>
-        <line x1="296" y1="132" x2="296" y2="182" stroke="#181410" stroke-width="3" marker-end="url(#ar)"/>
-        <text x="252" y="198" font-size="12" fill="#181410" text-anchor="middle">restoring</text>
-        <line x1="392" y1="132" x2="392" y2="172" stroke="#6f6453" stroke-width="1.5" marker-end="url(#ar)"/>
-        <text x="436" y="190" font-size="11" fill="#6f6453" text-anchor="middle">damping (weak)</text>
-        <line x1="140" y1="92" x2="140" y2="188" stroke="#181410" stroke-width="2" marker-start="url(#ar)" marker-end="url(#ar)"/>
-        <text x="140" y="210" font-size="12" fill="#d9341c" text-anchor="middle">sway ~0.49 Hz</text>
-        <text x="340" y="250" font-size="13" fill="#d9341c" text-anchor="middle" font-weight="600">push &gt; restoring + damping → the sway grows</text>
+        <line x1="90" y1="205" x2="560" y2="205" stroke="#c3b69c" stroke-width="1" stroke-dasharray="6 6"/>
+        <text x="566" y="209" font-size="11" fill="#6f6453">rest position</text>
+        <line x1="130" y1="205" x2="130" y2="120" stroke="#181410" stroke-width="2" marker-start="url(#ar)" marker-end="url(#ar)"/>
+        <text x="130" y="226" font-size="12" fill="#d9341c" text-anchor="middle">sway</text>
+        <text x="220" y="86" font-size="12" fill="#181410">bridge deck</text>
+        <rect x="220" y="94" width="240" height="52" rx="6" fill="#e3d7c2" stroke="#181410" stroke-width="2"/>
+        <circle cx="285" cy="120" r="4" fill="#181410"/>
+        <circle cx="340" cy="120" r="4" fill="#181410"/>
+        <circle cx="395" cy="120" r="4" fill="#181410"/>
+        <line x1="255" y1="94" x2="255" y2="58" stroke="#181410" stroke-width="2" marker-end="url(#ar)"/>
+        <text x="255" y="50" font-size="11" fill="#181410" text-anchor="middle">v (deck moving up)</text>
+        <line x1="385" y1="94" x2="385" y2="40" stroke="#d9341c" stroke-width="5" marker-end="url(#ar)"/>
+        <text x="385" y="30" font-size="12.5" fill="#d9341c" text-anchor="middle" font-weight="600">applied force (crowd, in step)</text>
+        <line x1="305" y1="146" x2="305" y2="198" stroke="#181410" stroke-width="3" marker-end="url(#ar)"/>
+        <text x="305" y="218" font-size="12" fill="#181410" text-anchor="middle">restoring force (F = kx)</text>
+        <line x1="410" y1="146" x2="410" y2="182" stroke="#6f6453" stroke-width="1.5" marker-end="url(#ar)"/>
+        <text x="424" y="170" font-size="11" fill="#6f6453">damping (small)</text>
+        <text x="340" y="258" font-size="13" fill="#d9341c" text-anchor="middle" font-weight="600">crowd force is in the direction of motion → adds energy → the sway grows</text>
       </svg>
     </div>
   </section>
@@ -100,7 +101,7 @@
     <h2 class="anim" style="--d:.1s">Unit 1: Dynamics</h2>
     <div class="calcrow">
       <div class="main">
-        <p class="body anim" style="--d:.2s">A back-and-forth sway is the projection of circular motion, so we use our circular-motion equations with r = the sway amplitude A = 0.070&nbsp;m. The span sways at f = 0.49&nbsp;Hz. <span style="opacity:.7">(f and A are measured values from Arup's investigation, Dallard et&nbsp;al., 2001; the calculations below are mine.)</span></p>
+        <p class="body anim" style="--d:.2s">A back and forth sway is the shadow of circular motion, so we use our circular motion equations with r = the sway amplitude A = 0.070&nbsp;m. The deck is fastest in the middle of the swing and stops at each end to turn around (just like a swing), so the results below are the <em>maximum</em> speed and acceleration. The bridge sways at f = 0.49&nbsp;Hz. <span style="opacity:.7">(f and A are measured by Arup, Dallard et&nbsp;al., 2001; the calculations below are mine.)</span></p>
         <div class="eq anim" style="--d:.34s">
           <span class="lbl">Period, frequency &amp; circular motion</span>
           T = 1/f = 1/0.49 = <b>2.04 s</b><br>
@@ -113,10 +114,10 @@
         <h4>How I worked it out</h4>
         <ol>
           <li>Inputs (measured by Arup): <b>f = 0.49 Hz</b> (sways per second) and <b>A = 0.070 m</b> (how far it swings each way).</li>
-          <li>Period = time for one full sway: T = 1/f = 1/0.49 = <b>2.04 s</b>.<span class="sheet">sheet: Period &amp; Frequency</span></li>
-          <li>Picture a ball glued to a spinning record, lit from the side so it casts a shadow on the wall. As the ball goes round the circle, its shadow slides straight back and forth, that shadow moves exactly like our swaying bridge. So a sway is just the side-view of circular motion, with circle radius r = the sway amplitude A. That means I'm allowed to use the circle equations from our sheet.</li>
-          <li>Fastest point is mid-swing: v = 2πrf = <b>0.22 m/s</b>.<span class="sheet">sheet: Circular Motion (v = 2πr/T)</span></li>
-          <li>Acceleration peaks at the ends of the swing: a = 4π²rf² = <b>0.66 m/s²</b> (≈ 0.07g).<span class="sheet">sheet: Centripetal Acceleration</span></li>
+          <li>Period = time for one full sway: T = 1/f = 1/0.49 = <b>2.04 s</b>.</li>
+          <li>Picture a ball glued to a spinning record, lit from the side so it casts a shadow on the wall. As the ball goes round, its shadow slides straight back and forth, exactly like our swaying bridge. So a sway is just the side view of circular motion, with circle radius r = the sway amplitude A.</li>
+          <li>Fastest point is mid swing: v = 2πrf = <b>0.22 m/s</b>.</li>
+          <li>Acceleration peaks at the ends of the swing: a = 4π²rf² = <b>0.66 m/s²</b>. That's small, about 0.07g (0.66 ÷ 9.8 ≈ 0.07).</li>
           <li>So: one sway every ~2 s, peak speed like a slow walk, enough sideways push to feel and grab the rails.</li>
         </ol>
       </aside>
@@ -129,7 +130,7 @@
     <h2 class="anim" style="--d:.1s">Unit 2: Energy &amp; Momentum</h2>
     <div class="calcrow">
       <div class="main">
-        <p class="body anim" style="--d:.2s">Each sideways step gives the deck an impulse (a change in momentum) and does work on it (adds energy). One step: F ≈ 30&nbsp;N (~4% of body weight), Δt ≈ 0.5&nbsp;s, distance d = 0.070&nbsp;m.</p>
+        <p class="body anim" style="--d:.2s">Each sideways step gives the deck an impulse (a change in momentum) and does work on it (adds energy). As you walk you rock slightly side to side, so each step pushes sideways with about 5% of your body weight, roughly F ≈ 30&nbsp;N for a 60&nbsp;kg person. Δt ≈ 0.5&nbsp;s, distance d = 0.070&nbsp;m. <span style="opacity:.7">(d = 0.070&nbsp;m and 166 are measured by Arup, Dallard et&nbsp;al., 2001; F and Δt are standard estimates; the rest are my calculations.)</span></p>
         <div class="eq anim" style="--d:.34s">
           <span class="lbl">Impulse &amp; Work (both on our formula sheet)</span>
           Momentum: J = FΔt = (30)(0.5) = <b>15 N·s</b>/step → synced 166 ≈ <b>2.5×10³ N·s</b><br>
@@ -140,12 +141,12 @@
       <aside class="work anim" style="--d:.42s">
         <h4>How I worked it out</h4>
         <ol>
-          <li>Estimate one footstep: sideways push <b>F ≈ 30 N</b> (about 4% of a 70 kg person's 690 N weight), contact time <b>Δt ≈ 0.5 s</b> (~2 steps/sec), step distance <b>d = 0.070 m</b>.</li>
-          <li>Impulse of one step: J = FΔt = 30 × 0.5 = <b>15 N·s</b>, and that equals the momentum the deck gains (J = Δp).<span class="sheet">sheet: Impulse, J = FΔt = Δp</span></li>
+          <li>Estimate one footstep: sideways push <b>F ≈ 30 N</b> (about 5% of a 60 kg person's weight: F<sub>g</sub> = mg = 60 × 9.8 = <b>590 N</b>, and 5% of 590 ≈ 30 N), contact time <b>Δt ≈ 0.5 s</b> (~2 steps/sec), step distance <b>d = 0.070 m</b>.</li>
+          <li>Impulse of one step: J = FΔt = 30 × 0.5 = <b>15 N·s</b>, and that equals the momentum the deck gains (J = Δp).</li>
           <li>Momentum is a vector (it has direction). Out of step, the pushes point random ways and cancel. In step, they all point the same way and add.</li>
-          <li>Synced crowd: 166 × 15 ≈ <b>2.5×10³ N·s</b> in one direction every half-sway.<span class="sheet">sheet: Conservation of Momentum</span></li>
-          <li>Energy each push adds: W = Fd = 30 × 0.070 = <b>2.1 J</b>.<span class="sheet">sheet: Work, W = Fd</span></li>
-          <li>~2 pushes per cycle ≈ 4 J each, × 166 people ≈ <b>700 J added every cycle</b>. They push <em>with</em> the motion (like pumping a swing), so it's positive energy added every cycle. Nothing drains it, so it piles up as the deck's kinetic energy (½mv²).<span class="sheet">sheet: Kinetic Energy</span></li>
+          <li>Synced crowd: 166 × 15 ≈ <b>2.5×10³ N·s</b> in one direction every half sway.</li>
+          <li>Energy each push adds: W = Fd = 30 × 0.070 = <b>2.1 J</b>.</li>
+          <li>~2 pushes per cycle ≈ 4 J each, × 166 people ≈ <b>700 J added every cycle</b>. They push <em>with</em> the motion (like pumping a swing), so it's positive energy added every cycle. Nothing drains it, so it piles up as the deck's kinetic energy (½mv²).</li>
         </ol>
       </aside>
     </div>
@@ -157,23 +158,23 @@
     <h2 class="anim" style="--d:.1s">Why it didn't stop</h2>
     <div class="calcrow">
       <div class="main">
-        <p class="body anim" style="--d:.2s">Every walker pushes a little <em>with</em> the sway, so the crowd acts as <span class="term">negative damping<span class="def">Damping normally drains a wobble away. Here it was reversed, the crowd fed energy in instead of removing it.</span></span>, it feeds energy in instead of draining it. There is a tipping-point crowd size, the critical number, where the bridge can no longer damp the wobble away faster than the crowd pumps it up (Dallard et&nbsp;al., 2001).</p>
+        <p class="body anim" style="--d:.2s">Every walker pushes a little <em>with</em> the sway, so the crowd acts as <span class="term">negative damping<span class="def">Damping normally drains a wobble away. Here it was reversed, the crowd fed energy in instead of removing it.</span></span>, it feeds energy in instead of draining it. There is a tipping point crowd size, the critical number, where the bridge can no longer damp the wobble away faster than the crowd pumps it up (Dallard et&nbsp;al., 2001).</p>
         <div class="eq anim" style="--d:.34s">
           <span class="lbl">Critical crowd (Dallard et al., 2001)</span>
           N<sub>c</sub> = 8π·ζ·f·M / c<sub>p</sub> &nbsp;→&nbsp; <b>166 people</b> (north span)
-          <span class="res" style="font-size:.8em;font-weight:400">8π = a fixed number from the math (≈ 25) · ζ (zeta) = how much the bridge naturally damps itself · f = sway frequency · M = moving mass of the deck · c<sub>p</sub> = how hard one person pushes</span>
+          <span class="res" style="font-size:.8em;font-weight:400">8π = a fixed number from the math (≈ 25) · ζ (zeta) = how much the bridge naturally damps itself · f = sway frequency · M = moving mass of the deck · c<sub>p</sub> = how hard one person pushes<br>Arup measured ζ, M and c<sub>p</sub> and got N<sub>c</sub> ≈ 166, I'm citing their result, not deriving it (I don't have those values).</span>
         </div>
         <p class="plain anim" style="--d:.5s">In plain terms: below the critical number it stays calm; above it, the sway runs away, and the bigger it gets, the more people lock into step (synchronisation, the same maths as fireflies flashing together, Strogatz et&nbsp;al., 2005).</p>
       </div>
       <aside class="work anim" style="--d:.42s">
         <h4>What this means</h4>
         <ol>
-          <li>Think of a tug-of-war over the sway: the <b>crowd adds energy</b> (negative damping), the <b>bridge's own damping removes it</b>.</li>
-          <li>The formula just compares those two. N<sub>c</sub> is the crowd size where they exactly balance, the tipping point.</li>
+          <li><b>N<sub>c</sub> = the critical number</b>: the tipping point crowd size where the bridge can no longer calm itself. For this bridge, 166.</li>
+          <li>Think of a tug of war over the sway: the <b>crowd adds energy</b> (negative damping), the <b>bridge's own damping removes it</b>.</li>
+          <li>The formula compares the two: the bridge's defence (damping ζ, mass M, frequency f) on top, the per person push (c<sub>p</sub>) on the bottom. They exactly balance at N<sub>c</sub>.</li>
           <li><b>Below N<sub>c</sub>:</b> the bridge wins, the wobble dies out → calm.</li>
           <li><b>Above N<sub>c</sub>:</b> the crowd wins, energy piles up faster than it drains → runaway sway.</li>
           <li>In Arup's walking test on the north span, that tipping point was <b>166 people</b>, one more and it suddenly went unstable.</li>
-          <li>It snowballs: a bigger sway makes it even easier to walk in step, so more people sync and push harder.</li>
         </ol>
       </aside>
     </div>
@@ -194,7 +195,7 @@
         <div class="grp"><label>People</label><input type="range" id="ppl" min="20" max="320" step="1" value="180"><span class="val" id="pplV">180</span></div>
         <div class="grp"><label>Dampers</label><div class="tog"><button id="dOff" class="on">None</button><button id="dOn">Retrofit</button></div></div>
       </div>
-      <div class="simcap">Slide step-freq toward <b>0.49 Hz</b> → walkers redden &amp; lock in → sway explodes. Drop people below <b>166</b> → it can't. Flip <b>Retrofit</b> → it dies.</div>
+      <div class="simcap">Slide step freq toward <b>0.49 Hz</b> → walkers redden &amp; lock in → sway explodes. Drop people below <b>166</b> → it can't. Flip <b>Retrofit</b> → it dies.</div>
     </div>
     <div class="siminfo anim" style="--d:.34s">
       <aside class="work">
@@ -208,14 +209,42 @@
         </ol>
       </aside>
       <aside class="work">
-        <h4>How I built it</h4>
+        <h4>The science behind it</h4>
         <ol>
-          <li>I wrote it from scratch in JavaScript (an HTML canvas), no library.</li>
-          <li>It follows one rule: count the people who are <b>in tune with the bridge</b> = people × how close the step-rate is to 0.49 Hz.</li>
-          <li>If that number is <b>above 166</b> (the critical crowd), the sway <b>grows</b> a bit each frame. Below 166, it <b>shrinks</b>. That's it.</li>
-          <li>The deck is drawn rocking side to side at 0.49 Hz; the dots are walkers that turn red as they fall into step.</li>
-          <li><b>Retrofit</b> sets the tipping point sky-high, so it can never grow, that's the dampers.</li>
-          <li>Honest note: a simple teaching model tuned to the real numbers (0.49 Hz, 166 people), not an exact engineering simulation.</li>
+          <li>Each walker pushes the deck a little <b>sideways</b> each step.</li>
+          <li><b>Random</b> steps point different ways and cancel out.</li>
+          <li>Near <b>0.49 Hz</b> the walkers fall into step, so their pushes line up and add (synchronisation).</li>
+          <li>That synced crowd feeds energy <b>into</b> the sway, like a swing pushed in time, while the bridge's <b>damping</b> drains it out. A tug of war.</li>
+          <li>Below <b>166</b> the damping wins (calm); above 166 the crowd wins (runaway).</li>
+          <li><b>Retrofit</b> = the dampers draining energy so fast the crowd can't win. (Teaching model tuned to 0.49 Hz and 166, not an exact engineering sim.)</li>
+        </ol>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 8b · THE MATH BEHIND THE MODEL -->
+  <section class="slide" data-part="II · The Physics">
+    <div class="kick anim">Interactive model</div>
+    <h2 class="anim" style="--d:.08s;font-size:clamp(24px,3.8vw,44px);margin-bottom:.1em">The math behind it</h2>
+    <div class="siminfo anim" style="--d:.2s">
+      <aside class="work">
+        <h4>What the model computes</h4>
+        <ol>
+          <li><b>closeness</b> = how near the step rate is to 0.49 Hz (1 = right on it, 0 = far off).</li>
+          <li><b>in-tune people = people × closeness</b> (only people near the rhythm count).</li>
+          <li><b>grow = (in-tune people) − 166</b>.</li>
+          <li>Each moment: <b>new sway = old sway + (old sway × grow × a tiny time step)</b>. Positive grow → sway gets bigger; negative → it shrinks.</li>
+          <li>The deck is drawn as <b>sway × sin(time)</b>, so it rocks side to side.</li>
+          <li><b>Retrofit</b> makes the 166 huge, so grow is always negative and the wobble dies.</li>
+        </ol>
+      </aside>
+      <aside class="work">
+        <h4>The real physics it stands for <span style="opacity:.7">(beyond our course)</span></h4>
+        <ol>
+          <li>The deck is a driven, damped oscillator: <b>m·a = −kx − cv + F</b>. That's Newton's 2nd law (F = ma) with a spring-like pull back to centre (−kx) and a damping force (−cv).</li>
+          <li>The crowd's push acts like <b>negative damping: F = c<sub>p</sub>·v</b>, it pushes with the motion, adding energy instead of removing it.</li>
+          <li>It runs away once the crowd beats the bridge's damping, at the critical number <b>N<sub>c</sub> = 8π·ζ·f·M / c<sub>p</sub> ≈ 166</b>.</li>
+          <li>My model is a simple stand-in for that same balance, tuned to the real 0.49 Hz and 166.</li>
         </ol>
       </aside>
     </div>
@@ -227,10 +256,12 @@
       <div class="txt">
         <div class="kick anim">The error &amp; the fix</div>
         <h2 class="anim" style="--d:.1s">Assumption,<br>then dampers</h2>
-        <p class="body anim" style="--d:.22s">The mistake wasn't a weak part, it was assuming foot traffic was vertical and random. Stiffening the bridge was rejected (you'd need ~7× the stiffness to move it out of the danger band, which wrecks the slim design), so they added damping: 37 viscous dampers plus ~52 tuned mass dampers (Foster&nbsp;+&nbsp;Partners, 2002).</p>
+        <p class="body anim" style="--d:.22s">No part was weak. The mistake: they thought people only push down when they walk, and forgot people also push a little sideways. That little sideways push is what shook the bridge. To fix it, making the bridge stiffer would take about 7 times more stiffness and wreck the slim design, so they added dampers instead: 37 viscous dampers plus ~52 tuned mass dampers (Foster&nbsp;+&nbsp;Partners, 2002).</p>
         <div class="eq anim" style="--d:.4s">
-          <span class="lbl">Why not stiffen? (f ∝ √(k/m))</span>
-          (1.3 / 0.49)² ≈ <b>7×</b> stiffer needed → impractical → damping chosen
+          <span class="lbl">Why not stiffen? (natural frequency f = (1/2π)√(k/m))</span>
+          With mass fixed, f ∝ √k, so to change f you scale k by the ratio squared:<br>
+          k₂/k₁ = (f₂/f₁)² = (1.3 / 0.49)² ≈ <b>7×</b> stiffer needed → impractical → damping chosen
+          <span class="res" style="font-size:.8em;font-weight:400">f = (1/2π)√(k/m) is the standard vibration relation; the 0.49 Hz is Arup's measured value (Dallard et al., 2001), 1.3 Hz is the target above the danger band.</span>
         </div>
         <p class="plain anim" style="--d:.55s">In plain terms: the dampers drain energy faster than any crowd can add it.</p>
       </div>
@@ -250,7 +281,7 @@
         <div class="t pos">Positive</div>
         <ul>
           <li>Anchored the Bankside regeneration, linking St&nbsp;Paul's to Tate&nbsp;Modern, which generated ~£100M/yr &amp; ~3,000 jobs for a deprived borough <span class="cite">(Tate, 2001)</span>.</li>
-          <li>A safe, step-free, car-free Thames crossing, now hosting cycle-hire docks.</li>
+          <li>A safe, step free, car free Thames crossing, now hosting cycle hire docks.</li>
           <li>The research permanently improved global footbridge design <span class="cite">(Venuti &amp; Bruno, 2009)</span>.</li>
         </ul>
       </div>
@@ -258,7 +289,7 @@
         <div class="t neg">Negative</div>
         <ul>
           <li>The £5M repair pushed cost from a £16M budget to £23.2M of public/charitable funds.</li>
-          <li>Two-year closure denied the public a promised crossing.</li>
+          <li>Two year closure denied the public a promised crossing.</li>
           <li>The "Wobbly Bridge" name stuck, reputational damage to a flagship project.</li>
         </ul>
       </div>
@@ -273,15 +304,15 @@
       <div class="col">
         <div class="t pos">Positive</div>
         <ul>
-          <li>Car-free crossing, every walk or cycle trip replaces a vehicle journey, cutting local emissions.</li>
-          <li>Concentrates foot traffic near low-carbon transit (Blackfriars, Southwark).</li>
+          <li>Car free crossing, every walk or cycle trip replaces a vehicle journey, cutting local emissions.</li>
+          <li>Concentrates foot traffic near low carbon transit (Blackfriars, Southwark).</li>
           <li>The 2025–26 refurbishment reuses the existing aluminium deck panels to cut waste.</li>
         </ul>
       </div>
       <div class="col">
         <div class="t neg">Negative</div>
         <ul>
-          <li>Steel &amp; aluminium are energy-intensive, high embodied carbon before anyone crosses <span class="cite">(Jena &amp; Kaewunruen, 2021)</span>.</li>
+          <li>Steel &amp; aluminium are energy intensive, high embodied carbon before anyone crosses <span class="cite">(Jena &amp; Kaewunruen, 2021)</span>.</li>
           <li>The retrofit added material shipped from the US &amp; Germany.</li>
           <li>Construction works in the Thames disrupt the river environment.</li>
         </ul>
@@ -308,7 +339,7 @@
   <section class="slide dark" data-part="III · Fix &amp; Fallout">
     <div class="kick anim">References (APA)</div>
     <div class="refs anim" style="--d:.15s;color:var(--paper)">
-      <p>Dallard, P., Fitzpatrick, A.&nbsp;J., Flint, A., Le&nbsp;Bourva, S., Low, A., Ridsdill&nbsp;Smith, R.&nbsp;M., &amp; Willford, M. (2001). The London Millennium Footbridge. <em>The Structural Engineer, 79</em>(22), 17–33.</p>
+      <p>Dallard, P., Fitzpatrick, A.&nbsp;J., Flint, A., Le&nbsp;Bourva, S., Low, A., Ridsdill&nbsp;Smith, R.&nbsp;M., &amp; Willford, M. (2001). The London Millennium Footbridge. <em>The Structural Engineer, 79</em>(22), 17–33. <span style="color:var(--soft)">[the Arup engineering investigation]</span></p>
       <p>Fujino, Y., Pacheco, B.&nbsp;M., Nakamura, S., &amp; Warnitchai, P. (1993). Synchronization of human walking observed during lateral vibration of a congested pedestrian bridge. <em>Earthquake Engineering &amp; Structural Dynamics, 22</em>(9), 741–758.</p>
       <p>Jena, T., &amp; Kaewunruen, S. (2021). Life cycle sustainability assessments of an innovative FRP composite footbridge. <em>Sustainability, 13</em>(23), 13000.</p>
       <p>Newland, D.&nbsp;E. (2003). <em>Vibration of the London Millennium Footbridge: Part 2: Cure.</em> University of Cambridge, Department of Engineering.</p>
@@ -317,7 +348,7 @@
       <p>Taylor Devices, Inc. (n.d.). <em>Damper retrofit of the London Millennium Footbridge</em> [Case study]. https://www.taylordevices.com</p>
       <p>Venuti, F., &amp; Bruno, L. (2009). Crowd-structure interaction in lively footbridges under synchronous lateral excitation: A literature review. <em>Physics of Life Reviews, 6</em>(3), 176–206.</p>
       <p style="margin-top:1em;color:var(--soft)"><strong>Image &amp; video sources</strong></p>
-      <p>Opening-day crowd: Wired (2009). https://www.wired.com/2009/06/dayintech-0610/</p>
+      <p>Opening day crowd: Wired (2009). https://www.wired.com/2009/06/dayintech-0610/</p>
       <p>Dampers under the deck: Arquitectura Viva. https://arquitecturaviva.com/works/puente-del-milenio-1</p>
       <p>The bridge today: The Architects' Journal. https://www.architectsjournal.co.uk/news/fosters-slippery-millennium-bridge-facing-fresh-works</p>
       <p>Wobble footage: YouTube. https://youtu.be/eAXVa__XWZ8</p>
@@ -328,7 +359,7 @@
 
 <div class="arrows"><button id="prev">↑</button><button id="nextB">↓</button></div>
 <div class="dots" id="dots"></div>
-<div class="hud count" id="count">01 / 13</div>
+<div class="hud count" id="count">01 / 14</div>
 <div class="hud partlbl" id="partlbl">The Wobble</div>
 
 <script src="script.js"></script>
