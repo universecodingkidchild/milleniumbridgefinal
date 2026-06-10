@@ -124,7 +124,7 @@ input[type=range]::-moz-range-thumb{width:13px;height:13px;background:var(--red)
 }
 
 /* ---- plain-English helper line ---- */
-.plain{font-family:var(--body);font-size:clamp(12px,1.5vw,16px);font-style:italic;color:var(--soft);
+.plain{font-family:var(--body);font-size:clamp(12px,1.5vw,16px);color:var(--soft);
   margin-top:.8em;max-width:38ch;line-height:1.45}
 .slide.dark .plain{color:#c9bca2}
 

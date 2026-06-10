@@ -101,7 +101,7 @@
     <h2 class="anim" style="--d:.1s">Unit 1: Dynamics</h2>
     <div class="calcrow">
       <div class="main">
-        <p class="body anim" style="--d:.2s">A back and forth sway is the shadow of circular motion, so we use our circular motion equations with r = the sway amplitude A = 0.070&nbsp;m. The deck is fastest in the middle of the swing and stops at each end to turn around (just like a swing), so the results below are the <em>maximum</em> speed and acceleration. The bridge sways at f = 0.49&nbsp;Hz. <span style="opacity:.7">(f and A are measured by Arup, Dallard et&nbsp;al., 2001; the calculations below are mine.)</span></p>
+        <p class="body anim" style="--d:.2s">A back and forth sway is the shadow of circular motion, so we use our circular motion equations with r = the sway amplitude A = 0.070&nbsp;m. The deck is fastest in the middle of the swing and stops at each end to turn around (just like a swing), so the results below are the maximum speed and acceleration. The bridge sways at f = 0.49&nbsp;Hz. <span style="opacity:.7">(f and A are measured by Arup, Dallard et&nbsp;al., 2001; the calculations below are mine.)</span></p>
         <div class="eq anim" style="--d:.34s">
           <span class="lbl">Period, frequency &amp; circular motion</span>
           T = 1/f = 1/0.49 = <b>2.04 s</b><br>
@@ -132,7 +132,7 @@
       <div class="main">
         <p class="body anim" style="--d:.2s">Each sideways step gives the deck an impulse (a change in momentum) and does work on it (adds energy). As you walk you rock slightly side to side, so each step pushes sideways with about 5% of your body weight, roughly F ≈ 30&nbsp;N for a 60&nbsp;kg person. Δt ≈ 0.5&nbsp;s, distance d = 0.070&nbsp;m. <span style="opacity:.7">(d = 0.070&nbsp;m and 166 are measured by Arup, Dallard et&nbsp;al., 2001; F and Δt are standard estimates; the rest are my calculations.)</span></p>
         <div class="eq anim" style="--d:.34s">
-          <span class="lbl">Impulse &amp; Work (both on our formula sheet)</span>
+          <span class="lbl">Impulse &amp; Work</span>
           Momentum: J = FΔt = (30)(0.5) = <b>15 N·s</b>/step → synced 166 ≈ <b>2.5×10³ N·s</b><br>
           Energy: W = Fd = (30)(0.070) = <b>2.1 J</b>/push → ≈ <b>700 J</b>/cycle (166 people)
         </div>
@@ -141,12 +141,12 @@
       <aside class="work anim" style="--d:.42s">
         <h4>How I worked it out</h4>
         <ol>
-          <li>Estimate one footstep: sideways push <b>F ≈ 30 N</b> (about 5% of a 60 kg person's weight: F<sub>g</sub> = mg = 60 × 9.8 = <b>590 N</b>, and 5% of 590 ≈ 30 N), contact time <b>Δt ≈ 0.5 s</b> (~2 steps/sec), step distance <b>d = 0.070 m</b>.</li>
-          <li>Impulse of one step: J = FΔt = 30 × 0.5 = <b>15 N·s</b>, and that equals the momentum the deck gains (J = Δp).</li>
+          <li>Estimate one footstep: sideways push <b>F ≈ 30 N</b>. A person's weight is F<sub>g</sub> = mg = 60 × 9.8 = <b>590 N</b>, and the sideways push is about 5% of that: 0.05 × 590 = <b>≈ 30 N</b>. People walk about 2 steps per second, so each step lasts <b>Δt = 1 ÷ 2 ≈ 0.5 s</b>. Step distance <b>d = 0.070 m</b>.</li>
+          <li>Impulse of one step: <b>J = FΔt</b> = 30 × 0.5 = <b>15 N·s</b>. This equals the momentum the deck gains, <b>J = Δp</b>.</li>
           <li>Momentum is a vector (it has direction). Out of step, the pushes point random ways and cancel. In step, they all point the same way and add.</li>
           <li>Synced crowd: 166 × 15 ≈ <b>2.5×10³ N·s</b> in one direction every half sway.</li>
           <li>Energy each push adds: W = Fd = 30 × 0.070 = <b>2.1 J</b>.</li>
-          <li>~2 pushes per cycle ≈ 4 J each, × 166 people ≈ <b>700 J added every cycle</b>. They push <em>with</em> the motion (like pumping a swing), so it's positive energy added every cycle. Nothing drains it, so it piles up as the deck's kinetic energy (½mv²).</li>
+          <li>~2 pushes per cycle ≈ 4 J each, × 166 people ≈ <b>700 J added every cycle</b>. They push with the motion (like pumping a swing), so it's positive energy added every cycle. Nothing drains it, so it piles up as the deck's kinetic energy (½mv²).</li>
         </ol>
       </aside>
     </div>
@@ -158,7 +158,7 @@
     <h2 class="anim" style="--d:.1s">Why it didn't stop</h2>
     <div class="calcrow">
       <div class="main">
-        <p class="body anim" style="--d:.2s">Every walker pushes a little <em>with</em> the sway, so the crowd acts as <span class="term">negative damping<span class="def">Damping normally drains a wobble away. Here it was reversed, the crowd fed energy in instead of removing it.</span></span>, it feeds energy in instead of draining it. There is a tipping point crowd size, the critical number, where the bridge can no longer damp the wobble away faster than the crowd pumps it up (Dallard et&nbsp;al., 2001).</p>
+        <p class="body anim" style="--d:.2s">Every walker pushes a little with the sway, so the crowd acts as <span class="term">negative damping<span class="def">Damping normally drains a wobble away. Here it was reversed, the crowd fed energy in instead of removing it.</span></span>, it feeds energy in instead of draining it. There is a tipping point crowd size, the critical number, where the bridge can no longer damp the wobble away faster than the crowd pumps it up (Dallard et&nbsp;al., 2001).</p>
         <div class="eq anim" style="--d:.34s">
           <span class="lbl">Critical crowd (Dallard et al., 2001)</span>
           N<sub>c</sub> = 8π·ζ·f·M / c<sub>p</sub> &nbsp;→&nbsp; <b>166 people</b> (north span)
@@ -261,7 +261,7 @@
           <span class="lbl">Why not stiffen? (natural frequency f = (1/2π)√(k/m))</span>
           With mass fixed, f ∝ √k, so to change f you scale k by the ratio squared:<br>
           k₂/k₁ = (f₂/f₁)² = (1.3 / 0.49)² ≈ <b>7×</b> stiffer needed → impractical → damping chosen
-          <span class="res" style="font-size:.8em;font-weight:400">f = (1/2π)√(k/m) is the standard vibration relation; the 0.49 Hz is Arup's measured value (Dallard et al., 2001), 1.3 Hz is the target above the danger band.</span>
+          <span class="res" style="font-size:.8em;font-weight:400">0.49 Hz is Arup's measured value (Dallard et al., 2001); 1.3 Hz is the target needed to move it out of the danger band.</span>
         </div>
         <p class="plain anim" style="--d:.55s">In plain terms: the dampers drain energy faster than any crowd can add it.</p>
       </div>
