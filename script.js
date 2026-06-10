@@ -90,24 +90,28 @@
   $('dOn').onclick = () => { damped = true; $('dOn').classList.add('on', 'green'); $('dOff').classList.remove('on'); };
 
   // one integration substep
+  // SIMPLE RULE: the sway grows when (people that are near the bridge's rhythm) is above
+  // the critical number 166, and shrinks when it's below. That's the whole model.
   function stp(dt) {
     const ws = 2 * Math.PI * fStep;
-    // resonance proximity: 1 when step-freq matches the bridge, ~0 when far off
-    const res = Math.exp(-Math.pow((fStep - f0) / resBW, 2));
-    // critical crowd: dampers push it out of reach
-    const Nc = damped ? 1e6 : Nc0;
-    // energy balance: above the critical crowd at resonance the sway grows, else decays
-    const rate = kGrow * (nP * res - Nc);
-    A += A * rate * dt;
-    if (A < 0.0004) A = 0.0004;             // small floor so it can recover
-    if (A > CAP) A = CAP;                    // display cap
-    ph += w0 * dt;                           // deck oscillates at its natural frequency
-    x = A * Math.sin(ph);
-    // sync (visual): walkers lock in as the sway grows at resonance
-    const Rt = res * Math.min(A / AREF, 1);
+    // how close the walking speed is to the bridge's rhythm: 1.0 at 0.49 Hz, fading to 0 away from it
+    const closeness = Math.exp(-Math.pow((fStep - f0) / resBW, 2));
+    // how many people are effectively "in tune" with the bridge
+    const effectivePeople = nP * closeness;
+    // dampers make the bridge able to handle way more people, so it never tips over
+    const tippingPoint = damped ? 100000 : 166;
+    // above the tipping point -> grow; below -> shrink
+    const grow = kGrow * (effectivePeople - tippingPoint);
+    A += A * grow * dt;
+    if (A < 0.0004) A = 0.0004;             // tiny floor so it can recover
+    if (A > CAP) A = CAP;                    // cap so it stays on screen
+    ph += w0 * dt;                           // deck rocks back and forth at its own rhythm
+    x = A * Math.sin(ph);                    // current sideways position
+    // walkers turn red and fall into step as the sway grows
+    const Rt = closeness * Math.min(A / AREF, 1);
     R += (Rt - R) * 2.5 * dt;
     for (const p of walkers) {
-      p.phase += ws * dt + 2.6 * R * Math.sin(ph - p.phase) * dt;  // pull toward deck motion
+      p.phase += ws * dt + 2.6 * R * Math.sin(ph - p.phase) * dt;
       p.u += p.sp * dt;
       if (p.u > 1.05) { p.u = -0.05; p.lane = (Math.random() - .5) * 48; }
     }

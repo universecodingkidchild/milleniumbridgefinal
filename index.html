@@ -55,11 +55,8 @@
         <div class="tline anim" style="--d:.45s"><span class="t">The phenomenon</span><span class="term">Synchronous lateral excitation<span class="def">A crowd, walking in step, driving the deck into a sideways vibration.</span></span></div>
       </div>
       <figure class="videoslot anim" style="--d:.4s">
-        <!-- TO ADD THE VIDEO: delete the <div class="vph">...</div> line below and paste a YouTube embed in its place, e.g.:
-             <iframe src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe>
-             Find a clip of the 2000 Millennium Bridge wobble on YouTube, copy its ID into VIDEO_ID. -->
-        <div class="vph"><b>&#9654;</b>Video: the Millennium Bridge wobbling (2000)<span>paste a YouTube embed here, see the note in the code</span></div>
-        <figcaption>Source: __________ (add the video's URL)</figcaption>
+        <iframe src="https://www.youtube.com/embed/eAXVa__XWZ8" title="Millennium Bridge wobble" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <figcaption>Source: YouTube. https://youtu.be/eAXVa__XWZ8</figcaption>
       </figure>
     </div>
   </section>
@@ -211,13 +208,14 @@
         </ol>
       </aside>
       <aside class="work">
-        <h4>What it's calculating</h4>
+        <h4>How I built it</h4>
         <ol>
-          <li>The deck is a driven oscillator from Newton's 2nd law (F = ma): a restoring force (Hooke, F = kx) + damping + the crowd's push.</li>
-          <li>Each walker adds a small sideways force; when steps sync, the pushes add together (the momentum idea from earlier).</li>
-          <li>"Retrofit" turns up the damping term, draining energy faster than the crowd can add it.</li>
-          <li>It's tuned to go unstable near 0.49 Hz and above ~166 people, matching Arup's real findings.</li>
-          <li>Note: a teaching model to show the behaviour, not an exact engineering simulation.</li>
+          <li>I wrote it from scratch in JavaScript (an HTML canvas), no library.</li>
+          <li>It follows one rule: count the people who are <b>in tune with the bridge</b> = people × how close the step-rate is to 0.49 Hz.</li>
+          <li>If that number is <b>above 166</b> (the critical crowd), the sway <b>grows</b> a bit each frame. Below 166, it <b>shrinks</b>. That's it.</li>
+          <li>The deck is drawn rocking side to side at 0.49 Hz; the dots are walkers that turn red as they fall into step.</li>
+          <li><b>Retrofit</b> sets the tipping point sky-high, so it can never grow, that's the dampers.</li>
+          <li>Honest note: a simple teaching model tuned to the real numbers (0.49 Hz, 166 people), not an exact engineering simulation.</li>
         </ol>
       </aside>
     </div>
@@ -318,10 +316,11 @@
       <p>Tate. (2001). <em>The economic impact of Tate Modern</em> [Press release]. https://www.tate.org.uk</p>
       <p>Taylor Devices, Inc. (n.d.). <em>Damper retrofit of the London Millennium Footbridge</em> [Case study]. https://www.taylordevices.com</p>
       <p>Venuti, F., &amp; Bruno, L. (2009). Crowd-structure interaction in lively footbridges under synchronous lateral excitation: A literature review. <em>Physics of Life Reviews, 6</em>(3), 176–206.</p>
-      <p style="margin-top:1em;color:var(--soft)"><strong>Image sources</strong></p>
+      <p style="margin-top:1em;color:var(--soft)"><strong>Image &amp; video sources</strong></p>
       <p>Opening-day crowd: Wired (2009). https://www.wired.com/2009/06/dayintech-0610/</p>
       <p>Dampers under the deck: Arquitectura Viva. https://arquitecturaviva.com/works/puente-del-milenio-1</p>
       <p>The bridge today: The Architects' Journal. https://www.architectsjournal.co.uk/news/fosters-slippery-millennium-bridge-facing-fresh-works</p>
+      <p>Wobble footage: YouTube. https://youtu.be/eAXVa__XWZ8</p>
     </div>
   </section>
 
